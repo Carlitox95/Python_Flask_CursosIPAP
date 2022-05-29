@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h1 class="tituloColor">{{ titulo }}</h1>
+
+    <blockquote class="textoBlockquote">    
+     <p><i class="material-icons left">info</i> <strong>Listado de Usuarios</strong></p>   
+    </blockquote>
+    
+    <div class="row">
+    <table id="tabla" class="highlight striped">
+        <thead class="cyan lighten-2">
+            <tr>
+             <th>Usuario</th>             
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in all_users %}
+            <tr>
+             <td>{{usuario}}</td>           
+            </tr>
+            {% endfor %}        
+      </tbody>
+    </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+     <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/estilos.css') }}">
+     <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/materialize.css') }}">    
+     <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/dataTables.semanticui.min.css') }}">    
+     <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/jquery.dataTablesNuevo.min.css') }}">    
+     <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/dataTables.bootstrap5.min.css') }}">  
+     <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/buttons.dataTables.min.css') }}">    
+     <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='css/materialIcons.css') }}">   
+
+      {% if titulo %}
+       <title>{{ titulo }} - Mi Sitio</title>
+      {% else %}
+       <title>¡Bienvenido a Mi Sitio</title>
+      {% endif %}
+      
+    </head>
+  <body>
+    
+
+    {# Nvar #}
+    <nav>
+      <div class="nav-wrapper cyan lighten-2 white-text">
+       <a href="#" class="brand-logo right">Logo</a>
+       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>      
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+         <li><a href="{{ url_for('index') }}">Home</a></li>
+         <li><a href="{{ url_for('seccion1') }}">Listado de Usuarios</a></li>
+         <li><a href="{{ url_for('seccion2') }}">Video del Curso</a></li>
+        </ul>
+      </div>
+    </nav>
+    {# Nvar #}
+    {# Nvar Mobile #}
+    <ul class="sidenav" id="mobile-demo"> 
+      <li><a href="{{ url_for('seccion1') }}">Listado de Usuarios</a></li>
+      <li><a href="{{ url_for('seccion2') }}">Video del Curso</a></li>                                
+    </ul>    
+    {# Nvar Mobile #} 
+
+    
+    {# Main Principal #}
+    <main>         
+      <div class="container">
+        {# Bloque de Contenido #}
+        {% block content %}    
+        {% endblock %}
+        {# Bloque de Contenido #}
+      </div>
+     <br>
+    </main>
+    {# Main Principal #}
+   
+    
+
+    {# Importo los JS #}
+     <script src="{{ url_for('static',filename='js/jquery-3.6.0.min.js') }}"></script>
+     <script src="{{ url_for('static',filename='js/dataTables.buttons.min.js') }}"></script>   
+     <script src="{{ url_for('static',filename='js/jquery.dataTablesNuevo.min.js') }}"></script>           
+     <script src="{{ url_for('static',filename='js/buttons.print.min.js') }}"></script>   
+     <script src="{{ url_for('static',filename='js/buttons.html5.min.js') }}"></script>     
+     <script src="{{ url_for('static',filename='js/pdfmake.min.js') }}"></script>   
+     <script src="{{ url_for('static',filename='js/materialize.js') }}"></script>          
+     <script src="{{ url_for('static',filename='js/scripts.js') }}"></script> 
+    {# Importo los JS #}         
+  </body>
+</html>

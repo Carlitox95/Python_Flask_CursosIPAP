@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if usuario %}
+     <h1 class="tituloColor">¡Bienvenido {{usuario}}!</h1>
+    {% else %}
+     <h1 class="tituloColor">¡Bienvenido aventurero desconocido!</h1>
+    {% endif %}
+
+    <blockquote class="textoBlockquote">    
+     <p><i class="material-icons left">info</i> <strong>Home del Curso Phyton con Flask</strong></p>   
+    </blockquote>
+
+
+
+{% endblock %}

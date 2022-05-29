@@ -1,0 +1,51 @@
+body {
+ display: flex;
+ min-height: 100vh;
+ flex-direction: column;
+}
+
+main {
+ flex: 1 0 auto;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+ margin: 0 auto;
+ max-width: 1280px;
+ width: 98%;
+}
+
+.redondearBordes {
+ border-radius: 10px 10px 10px 10px;
+}
+
+@media only screen and (min-width: 601px) {
+  .container {
+   width: 95%;
+   padding-top: 30px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .container {  
+   width: 90%;
+   padding-top: 20px;
+  }
+}
+
+.separarMobile {
+ padding-top: 10%;
+}
+
+.tituloColor {
+ border-bottom: 3px solid #4dd0e1;
+ padding-bottom:2px;
+}
+
+.textoBlockquote {
+  border-color:#4dd0e1; 
+  text-align: justify;
+ }
