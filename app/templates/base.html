@@ -49,6 +49,19 @@
     {# Main Principal #}
     <main>         
       <div class="container">
+        {# Mensajes Flash #}
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="collection with header">
+              {% for message in messages %}
+               <li class="collection-item" ><p><i class="material-icons left">info</i> {{ message }}</p></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}       
+        {# Mensajes Flash #}
+
+
         {# Bloque de Contenido #}
         {% block content %}    
         {% endblock %}

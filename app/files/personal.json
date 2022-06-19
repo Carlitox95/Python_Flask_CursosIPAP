@@ -1,13 +1,5 @@
 [
     {
-        "nombre": "Agustina Milena",
-        "apellido": "Veron",
-        "dni": "43050548",
-        "fecha": "2022-06-01",
-        "telefono": "02215460821",
-        "id": 4
-    },
-    {
         "nombre": "Carlos",
         "apellido": "Veron",
         "dni": "38835218",
@@ -46,5 +38,13 @@
         "fecha": "2022-07-09",
         "telefono": "02215460821",
         "id": 9
+    },
+    {
+        "nombre": "Agustina Milena",
+        "apellido": "Veron",
+        "dni": "43050548",
+        "fecha": "2022-06-01",
+        "telefono": "02215460821",
+        "id": 10
     }
 ]
