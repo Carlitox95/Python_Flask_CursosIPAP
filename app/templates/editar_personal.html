@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+ <h4 class="tituloColor"><strong>Editar Ingreso de Personal</strong></h4>
+
+  <br>
+  <blockquote class="textoBlockquote">
+   <p><strong><i class="material-icons left">info</i>Se modificaran los datos del Ingreso Registrado de Personal</strong></p>
+  </blockquote>
+    
+    {# Formulario #}
+    <form action="" method="POST"  novalidate>
+      {{ personal_form.hidden_tag() }}
+
+      <div class="input-field col s12">           
+        <i class="material-icons prefix">person</i>   
+        <label for="icon_prefix">{{ personal_form.nombre.label }}</label>         
+        {{ personal_form.nombre(size=32) }}
+        {% for error in personal_form.nombre.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </div>
+
+      <div class="input-field col s12">           
+        <i class="material-icons prefix">person</i>   
+        <label for="icon_prefix">{{ personal_form.apellido.label }}</label>         
+        {{ personal_form.apellido(size=32) }}
+        {% for error in personal_form.apellido.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </div>
+
+      <div class="input-field col s12">           
+        <i class="material-icons prefix">person_pin</i>   
+        <label for="icon_prefix">{{ personal_form.dni.label }}</label>         
+        {{ personal_form.dni(size=32) }}
+        {% for error in personal_form.dni.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </div>
+
+      <div class="input-field col s12">           
+        <i class="material-icons prefix">date_range</i>   
+        <label for="icon_prefix">{{ personal_form.fecha.label }}</label>         
+        {{ personal_form.fecha(size=32) }}
+        {% for error in personal_form.fecha.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </div>
+
+      <div class="input-field col s12">           
+        <i class="material-icons prefix">contact_phone</i>   
+        <label for="icon_prefix">{{ personal_form.telefono.label }}</label>         
+        {{ personal_form.telefono(size=32) }}
+        {% for error in personal_form.telefono.errors %}
+         <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+      </div>
+
+      <div class="input-field col s12"> 
+       <br> 
+       {{ personal_form.enviar(class_="waves-effect waves-light btn  color white-text") }}
+       {{ personal_form.cancelar(class_="waves-effect waves-light btn  color white-text") }}
+      </div>  
+
+    </form>
+    {# Formulario #}
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+[
+    {
+        "nombre": "Agustina Milena",
+        "apellido": "Veron",
+        "dni": "43050548",
+        "fecha": "2022-06-01",
+        "telefono": "02215460821",
+        "id": 4
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "Veron",
+        "dni": "38835218",
+        "fecha": "2022-06-13",
+        "telefono": "02215460821",
+        "id": 5
+    },
+    {
+        "nombre": "Cristina",
+        "apellido": "Hayime",
+        "dni": "18121760",
+        "fecha": "2022-06-13",
+        "telefono": "2216240835",
+        "id": 6
+    },
+    {
+        "nombre": "Cosme",
+        "apellido": "Fulanito",
+        "dni": "123456789",
+        "fecha": "2022-06-24",
+        "telefono": "02215460821",
+        "id": 7
+    },
+    {
+        "nombre": "Usuario",
+        "apellido": "Prueba Pruebita",
+        "dni": "12345678",
+        "fecha": "2022-07-01",
+        "telefono": "1212121212",
+        "id": 8
+    },
+    {
+        "nombre": "EMPLEADO NUEVO",
+        "apellido": "APELLIDO EMPLEADO",
+        "dni": "11619692",
+        "fecha": "2022-07-09",
+        "telefono": "02215460821",
+        "id": 9
+    }
+]

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row"></div>
+ <h4 class="tituloColor"><strong>Lista de personal</strong></h4>
+
+  <br>
+  <a class="waves-effect waves-light btn  color white-text" href="{{ url_for('ingresar_personal') }}">Ingresar personal</a>
+  <br><br>
+  <!-- crear tabla con lista de personal -->
+  
+  <table class="table" id="tabla">
+    <thead class="color white-text">
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+        <th>Fecha</th>
+        <th>Telefono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in personal %}
+      <tr>
+        <th>{{ p.id }}</th>
+        <td>{{ p.nombre }}</td>
+        <td>{{ p.apellido }}</td>
+        <td>{{ p.dni }}</td>
+        <td>{{ p.fecha }}</td>        
+        <td>{{ p.telefono }}</td>
+        <td>
+          <a class="waves-effect waves-light btn  color white-text" href="{{ url_for('index', borrar=p.id) }}">Eliminar</a>
+          <a class="waves-effect waves-light btn  color white-text" href="{{ url_for('editar_personal', id_empleado=p.id) }}">Editar</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+

@@ -46,6 +46,16 @@ main {
 }
 
 .textoBlockquote {
-  border-color:#4dd0e1; 
-  text-align: justify;
- }
+ border-color:#4dd0e1; 
+ text-align: justify;
+}
+
+.color {
+ background-color: #4dd0e1 !important;
+ color: white !important;
+}
+
+button {
+ background-color: #4dd0e1;
+ color: white;
+}

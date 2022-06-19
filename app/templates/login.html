@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    {# Seccion para el Formulario #}
+    <div class="row">
+
+      <blockquote class="textoBlockquote">
+        <p><strong><i class="material-icons left">info</i>Debe Iniciar Session para ver el Sitio</strong></p>
+      </blockquote>
+
+        <form action="" method="post" class="row" novalidate>
+         <h4 class="tituloColor">Iniciar Sesion</h4>
+         {{ login_form.hidden_tag() }}
+           
+            <div class="input-field col s12">           
+             <i class="material-icons prefix">account_circle</i>   
+             <label for="icon_prefix">{{ login_form.usuario.label }}</label>          
+             
+             {{ login_form.usuario(size=32) }}
+                {% for error in login_form.usuario.errors %}
+                 <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+
+
+            <div class="input-field col s12"> 
+             <i class="material-icons prefix">verified_user</i>   
+             <label for="verified_user">{{ login_form.password.label }}</label>       
+              
+             
+             {{ login_form.password(size=32) }}
+                {% for error in login_form.password.errors %}
+                 <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </div>
+
+            <div class="input-field col s12">  
+                <label>
+                 {{ login_form.remember_me() }} 
+                 <span>{{ login_form.remember_me.label }}</span>
+                </label>            
+            </div>
+        
+            <div class="input-field col s12"> 
+             <br> 
+             {{ login_form.enviar(class_="waves-effect waves-light btn  color white-text") }}
+            </div>       
+        </form>
+    </div>
+    {# Seccion para el Formulario #}
+
+
+    
+{% endblock %}
